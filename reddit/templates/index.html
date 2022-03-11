@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %} Reddit Clone - Dive into anything {% endblock %}
+
+{% block content %}
+
+    <section class="trending">
+        
+        <h5>Trending Today</h5>
+        <div class="trending-cards">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/zoe-DKMAAquUH0c-unsplash.jpg') }}" alt="" class="trending-card-img">
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/zoe-DKMAAquUH0c-unsplash.jpg') }}" alt="" class="trending-card-img">
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/zoe-DKMAAquUH0c-unsplash.jpg') }}" alt="" class="trending-card-img">
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/zoe-DKMAAquUH0c-unsplash.jpg') }}" alt="" class="trending-card-img">
+            </div>
+            
+        </div>
+        
+        
+        
+    </section>
+
+
+
+
+{% endblock %}

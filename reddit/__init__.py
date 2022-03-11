@@ -8,8 +8,8 @@ from flask_gravatar import Gravatar
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "SECRET_KEY")
-app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
+# app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "SECRET_KEY")
+# app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
 # app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL", "sqlite:///database.db")
 db = SQLAlchemy(app)
 

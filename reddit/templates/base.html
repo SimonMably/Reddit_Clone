@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f9db6db651.js" crossorigin="anonymous"></script>
+    
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+</head>
+<body>
+    <!-- TODO: Navbar -->
+    <nav id="nav" class="navbar">
+        <div class="nav-brand">
+            <a href="{{ url_for('homepage') }}">
+                <img src="{{ url_for('static', filename='images/Reddit Logo/On White/PNG/Reddit_Lockup_OnWhite.png') }}" alt="" class="reddit-logo">
+            </a>
+        </div>
+
+        <div class="search-wrapper" id="searchbar-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search Reddit" class="searchbar" id="search">
+        </div>
+
+        <ul class="nav-options">
+            <li class="list-options">
+                <a href="#" class="nav-btn btn-login">
+                    Log In
+                </a>
+            </li>
+            <li class="list-options">
+                <a href="#" class="nav-btn btn-register">
+                    Sign Up
+                </a>
+            </li>
+            <div class="list-option dropdown-content">
+                <!-- TODO: Complete dropdown menu -->
+                <!-- TODO: This will probably need JavaScript to do the dropdown menu -->
+                <button class="btn btn-dropdown">
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+            </div>
+        </ul>
+        
+    </nav>
+
+    
+    <!-- Content -->
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- JavaScript Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Carrois+Gothic&family=Heebo:wght@100;300&family=Merriweather+Sans:wght@300&family=Mukta+Mahee:wght@200;300&family=Rubik:wght@300&display=swap');
+
+/* Utility */
+
+:root {
+    --color-urchin: #172e35;
+    --color-dugong: #f2f6f7;
+    --color-beluga: #fff;
+    --color-dolphin: #d7dfe2;
+    --color-seal: #bbc7cc;
+    --color-narwhal: #7a9299;
+    --color-squid-ink: #000;
+    --color-mango-50: #fff8b8;
+    --color-gold: #ffd635;
+    --color-mango-300: #ffa800;
+    --color-mint-500: #00ccc0;
+    --color-alien-900: #02315c;
+    /* The below colours are primarily used in the Reddit app 
+       icon and for buttons as a gradient. 
+       --color-mango-500 is the same colour as the above 
+       --color-mango-300
+    */
+    --color-mango-500: #ffa800;
+    --color-orangered-500: #ff4500;
+    --color-orangered-600: #fb133a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 0;
+    font-size: 100%;
+    font: inherit; */
+}
+
+body {
+    background: var(--color-dolphin);
+    /* font-family: 'Noto Sans', sans-serif; */
+    font-family: 'Merriweather Sans', Arial, Helvetica, sans-serif;
+}
+
+section {
+    position: relative;
+    top: 65px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* font-family: 'Arsenal', sans-serif; */
+    
+}
+
+p {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+    background: var(--color-beluga);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 15px;
+}
+
+.nav-options {
+    display: flex;
+    align-items: center;
+}
+
+.list-options {
+    padding: 0 5px;
+    list-style: none;
+}
+
+.reddit-logo {
+    height: 32px;
+}
+
+/* TODO: Navbar Searchbar */
+
+.search-wrapper {
+    background-color: var(--color-dugong);
+    width: 40%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid var(--color-dugong);
+    border-radius: 3px;
+}
+
+.searchbar {
+    background-color: var(--color-dugong);
+    align-items: center;
+    height: 30px;
+    width: 95%;
+    float: right;
+    padding-left: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+/* TODO: Find a way to make yhe div and magnifying icon continue to 
+   TODO: be coloured white and have the border/#.
+   TODO: May have to use JavaScript. */
+.search-wrapper:hover {
+    background-color: var(--color-beluga);
+    border: 1px solid var(--color-alien-900);
+    border-radius: 3px;
+    outline: none;
+}
+
+.searchbar:hover, .searchbar:focus, .search-wrapper:hover, 
+.search-wrapper:focus, .fa-magnifying-glass:hover, 
+.fa-magnifying-glass:focus {
+    background-color: var(--color-beluga);
+}
+
+/* .searchbar:hover, .searchbar:focus, .search-wrapper:hover, .search-wrapper:focus {
+    background-color: var(--color-beluga);
+} */
+
+.fa-magnifying-glass {
+    color: var(--color-narwhal);
+    text-align: center;
+    width: 5%;
+    z-index: 1;
+}
+
+/* TODO: Navbar Buttons */
+
+.nav-options {
+    /* align-items: center; */
+}
+
+.list-options {
+    text-align: center;
+}
+
+.nav-btn {
+    font-size: 15px;
+    text-decoration: none;
+    margin: auto 5px;
+    padding: 5px 35px;
+    border-radius: 50px;
+    max-width: 50px;
+}
+
+.btn-login {
+    border: 2px solid #3550fc;
+}
+
+.btn-register {
+    background-color: #3550fc;
+    border: 2px solid #3550fc;
+    color: var(--color-beluga);
+}
+
+.btn-dropdown {
+    height: 30px;
+    width: 60px;
+    margin: 0 15px;
+}
+
+.fa-angle-down, .fa-user {
+    margin: 0 2px;
+}
+
+
+/* Trending */
+
+.trending-cards {
+    display: flex;
+    max-width: 600px;
+}
+
+.card {
+    width: 300px;
+    margin: 0 5px;
+}
+
+.trending-card-img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  } */

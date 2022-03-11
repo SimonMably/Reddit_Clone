@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField, EmailField, TextAreaField, SearchField, SelectField, SelectMultipleField
 from wtforms.validators import DataRequired, URL, Length, EqualTo, Email, ValidationError
 
-from reddit.models import User
+#from reddit.models import User
 
 
 class RegisterUserForm(FlaskForm):

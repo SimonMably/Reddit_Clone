@@ -7,8 +7,10 @@ from flask_login import login_required, login_user, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from reddit import app, db, login_manager
-from reddit.models import User, Post, Comment
+#from reddit.models import User, Post, Comment
 from reddit.forms import RegisterUserForm, CreatePost, CreateComment
+
+# TODO: Create database. 
 
 
 @app.context_processor
@@ -52,16 +54,16 @@ def load_user(user_id: int):
 @app.route("/home")
 def homepage():
     """"""
-    pass
+    return render_template("index.html")
 
 
-@app.route("/register-user", method=["GET", "POST"])
+@app.route("/register-user", methods=["GET", "POST"])
 def register_user():
     """"""
     pass
 
 
-@app.route("/login-user", method=["GET", "POST"])
+@app.route("/login-user", methods=["GET", "POST"])
 def login_user():
     """"""
     pass

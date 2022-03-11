@@ -6,7 +6,7 @@ from reddit import db
 
 class User(UserMixin, db.Model):
     __tablename__ = "users"
-    id = db.Column(db.Interger, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
@@ -16,14 +16,14 @@ class User(UserMixin, db.Model):
 
 class Post(db.Model):
     __tabelname__ = "posts"
-    id = db.Column(db.Interger, primar_key=True)
-    author_id = db.Column(db.Interger, db.ForeignKey("users.id"))
+    id = db.Column(db.Integer, primar_key=True)
+    author_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     author = relationship("User", back_populates="posts")
     # TODO: Decide if posts require a title
-    title = db.Column(db.String(250), Unique=True, nullable=False)
-    date = db.Column(db.string(250), nullable=False)
+    title = db.Column(db.String(250), unique=True, nullable=False)
+    date = db.Column(db.String(250), nullable=False)
     body = db.Column(db.Text, nullable=False)
-    img_url = db.Column(db.string(250), nullable=False)
+    img_url = db.Column(db.String(250), nullable=False)
     comments = relationship("Comment", back_populates="parent_post")
 
 
